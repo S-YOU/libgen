@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/olbat/libgen">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>LibGenerator::Definition - github.com/olbat/libgen</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/olbat/libgen/LibGenerator" data-name="libgenerator">
+      <a href="../LibGenerator.html">LibGenerator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CosmeticTransformer" data-name="libgenerator::cosmetictransformer">
+      <a href="../LibGenerator/CosmeticTransformer.html">CosmeticTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CountVisitor" data-name="libgenerator::countvisitor">
+      <a href="../LibGenerator/CountVisitor.html">CountVisitor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CrystalLibTransformer" data-name="libgenerator::crystallibtransformer">
+      <a href="../LibGenerator/CrystalLibTransformer.html">CrystalLibTransformer</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/olbat/libgen/LibGenerator/Definition" data-name="libgenerator::definition">
+      <a href="../LibGenerator/Definition.html">Definition</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/DuplicatesVisitor" data-name="libgenerator::duplicatesvisitor">
+      <a href="../LibGenerator/DuplicatesVisitor.html">DuplicatesVisitor</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/olbat/libgen/LibGenerator/Generator" data-name="libgenerator::generator">
+      <a href="../LibGenerator/Generator.html">Generator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Generator/Lib" data-name="libgenerator::generator::lib">
+      <a href="../LibGenerator/Generator/Lib.html">Lib</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Library" data-name="libgenerator::library">
+      <a href="../LibGenerator/Library.html">Library</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/NodeCounter" data-name="libgenerator::nodecounter">
+      <a href="../LibGenerator/NodeCounter.html">NodeCounter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/RemoveTransformer" data-name="libgenerator::removetransformer">
+      <a href="../LibGenerator/RemoveTransformer.html">RemoveTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/RenameTransformer" data-name="libgenerator::renametransformer">
+      <a href="../LibGenerator/RenameTransformer.html">RenameTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/SortTransformer" data-name="libgenerator::sorttransformer">
+      <a href="../LibGenerator/SortTransformer.html">SortTransformer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> LibGenerator::Definition
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../LibGenerator/Definition.html">LibGenerator::Definition</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/definition.cr#L7" target="_blank">lib_generator/definition.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28ctx%3AYAML%3A%3AParseContext%2Cnode%3AYAML%3A%3ANodes%3A%3ANode%2C_dummy%3ANil%29-class-method" class="signature"><strong>.new</strong>(ctx : YAML::ParseContext, node : YAML::Nodes::Node, _dummy : Nil)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28ctx%3AYAML%3A%3AParseContext%2Cnode%3AYAML%3A%3ANodes%3A%3ANode%29-class-method" class="signature"><strong>.new</strong>(ctx : YAML::ParseContext, node : YAML::Nodes::Node)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28__temp_48%3AJSON%3A%3APullParser%29-class-method" class="signature"><strong>.new</strong>(__temp_48 : JSON::PullParser)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%28prefixes%3D%5B%5DofString%2Cincludes%3D%5B%5DofString%2Cdescription%3Dnil%29-class-method" class="signature"><strong>.new</strong>(prefixes = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, includes = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, description = <span class="n">nil</span>)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Class Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#from_crystal%28source%3AString%29-class-method" class="signature"><strong>.from_crystal</strong>(source : String)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#description%3AString%3F-instance-method" class="signature"><strong>#description</strong> : String?</a>
+        
+          <div class="summary"><p>generator</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#description%3D%28_description%3AString%3F%29-instance-method" class="signature"><strong>#description=</strong>(_description : String?)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#includes%3AArray%28String%29-instance-method" class="signature"><strong>#includes</strong> : Array(String)</a>
+        
+          <div class="summary"><p>crystal_lib</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#includes%3D%28_includes%3AArray%28String%29%29-instance-method" class="signature"><strong>#includes=</strong>(_includes : Array(String))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse_lib%28cflags%3AArray%28String%29%3F%3D%5B%5DofString%29%3ACrystal%3A%3AASTNode-instance-method" class="signature"><strong>#parse_lib</strong>(cflags : Array(String)? = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>) : Crystal::ASTNode</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parse_lib%28cflags%3AString%29%3ACrystal%3A%3AASTNode-instance-method" class="signature"><strong>#parse_lib</strong>(cflags : String) : Crystal::ASTNode</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prefixes%3AArray%28String%29-instance-method" class="signature"><strong>#prefixes</strong> : Array(String)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prefixes%3D%28_prefixes%3AArray%28String%29%29-instance-method" class="signature"><strong>#prefixes=</strong>(_prefixes : Array(String))</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_json</strong>(json : JSON::Builder)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_yaml%28__temp_47%3AYAML%3A%3ANodes%3A%3ABuilder%29-instance-method" class="signature"><strong>#to_yaml</strong>(__temp_47 : YAML::Nodes::Builder)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(ctx:YAML::ParseContext,node:YAML::Nodes::Node,_dummy:Nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(ctx : YAML::ParseContext, node : YAML::Nodes::Node, _dummy : Nil)
+
+        <a class="method-permalink" href="#new%28ctx%3AYAML%3A%3AParseContext%2Cnode%3AYAML%3A%3ANodes%3A%3ANode%2C_dummy%3ANil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(ctx:YAML::ParseContext,node:YAML::Nodes::Node)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(ctx : YAML::ParseContext, node : YAML::Nodes::Node)
+
+        <a class="method-permalink" href="#new%28ctx%3AYAML%3A%3AParseContext%2Cnode%3AYAML%3A%3ANodes%3A%3ANode%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(__temp_48:JSON::PullParser)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(__temp_48 : JSON::PullParser)
+
+        <a class="method-permalink" href="#new%28__temp_48%3AJSON%3A%3APullParser%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new(prefixes=[]ofString,includes=[]ofString,description=nil)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(prefixes = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, includes = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>, description = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28prefixes%3D%5B%5DofString%2Cincludes%3D%5B%5DofString%2Cdescription%3Dnil%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/definition.cr#L29" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Class Method Detail</h2>
+  
+    <div class="entry-detail" id="from_crystal(source:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>from_crystal</strong>(source : String)
+
+        <a class="method-permalink" href="#from_crystal%28source%3AString%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/definition.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="description:String?-instance-method">
+      <div class="signature">
+        
+        def <strong>description</strong> : String?
+
+        <a class="method-permalink" href="#description%3AString%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>generator</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="description=(_description:String?)-instance-method">
+      <div class="signature">
+        
+        def <strong>description=</strong>(_description : String?)
+
+        <a class="method-permalink" href="#description%3D%28_description%3AString%3F%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="includes:Array(String)-instance-method">
+      <div class="signature">
+        
+        def <strong>includes</strong> : Array(String)
+
+        <a class="method-permalink" href="#includes%3AArray%28String%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc"><p>crystal_lib</p></div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="includes=(_includes:Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>includes=</strong>(_includes : Array(String))
+
+        <a class="method-permalink" href="#includes%3D%28_includes%3AArray%28String%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse_lib(cflags:Array(String)?=[]ofString):Crystal::ASTNode-instance-method">
+      <div class="signature">
+        
+        def <strong>parse_lib</strong>(cflags : Array(String)? = <span class="o">[]</span> <span class="k">of</span> <span class="t">String</span>) : Crystal::ASTNode
+
+        <a class="method-permalink" href="#parse_lib%28cflags%3AArray%28String%29%3F%3D%5B%5DofString%29%3ACrystal%3A%3AASTNode-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/definition.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parse_lib(cflags:String):Crystal::ASTNode-instance-method">
+      <div class="signature">
+        
+        def <strong>parse_lib</strong>(cflags : String) : Crystal::ASTNode
+
+        <a class="method-permalink" href="#parse_lib%28cflags%3AString%29%3ACrystal%3A%3AASTNode-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/definition.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prefixes:Array(String)-instance-method">
+      <div class="signature">
+        
+        def <strong>prefixes</strong> : Array(String)
+
+        <a class="method-permalink" href="#prefixes%3AArray%28String%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prefixes=(_prefixes:Array(String))-instance-method">
+      <div class="signature">
+        
+        def <strong>prefixes=</strong>(_prefixes : Array(String))
+
+        <a class="method-permalink" href="#prefixes%3D%28_prefixes%3AArray%28String%29%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_json(json:JSON::Builder)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_json</strong>(json : JSON::Builder)
+
+        <a class="method-permalink" href="#to_json%28json%3AJSON%3A%3ABuilder%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_yaml(__temp_47:YAML::Nodes::Builder)-instance-method">
+      <div class="signature">
+        
+        def <strong>to_yaml</strong>(__temp_47 : YAML::Nodes::Builder)
+
+        <a class="method-permalink" href="#to_yaml%28__temp_47%3AYAML%3A%3ANodes%3A%3ABuilder%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/olbat/libgen">
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/doc.js"></script>
+  <title>README - github.com/olbat/libgen</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li class="current"><a href="index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent " data-id="github.com/olbat/libgen/LibGenerator" data-name="libgenerator">
+      <a href="LibGenerator.html">LibGenerator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CosmeticTransformer" data-name="libgenerator::cosmetictransformer">
+      <a href="LibGenerator/CosmeticTransformer.html">CosmeticTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CountVisitor" data-name="libgenerator::countvisitor">
+      <a href="LibGenerator/CountVisitor.html">CountVisitor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CrystalLibTransformer" data-name="libgenerator::crystallibtransformer">
+      <a href="LibGenerator/CrystalLibTransformer.html">CrystalLibTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Definition" data-name="libgenerator::definition">
+      <a href="LibGenerator/Definition.html">Definition</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/DuplicatesVisitor" data-name="libgenerator::duplicatesvisitor">
+      <a href="LibGenerator/DuplicatesVisitor.html">DuplicatesVisitor</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/olbat/libgen/LibGenerator/Generator" data-name="libgenerator::generator">
+      <a href="LibGenerator/Generator.html">Generator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Generator/Lib" data-name="libgenerator::generator::lib">
+      <a href="LibGenerator/Generator/Lib.html">Lib</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Library" data-name="libgenerator::library">
+      <a href="LibGenerator/Library.html">Library</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/NodeCounter" data-name="libgenerator::nodecounter">
+      <a href="LibGenerator/NodeCounter.html">NodeCounter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/RemoveTransformer" data-name="libgenerator::removetransformer">
+      <a href="LibGenerator/RemoveTransformer.html">RemoveTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/RenameTransformer" data-name="libgenerator::renametransformer">
+      <a href="LibGenerator/RenameTransformer.html">RenameTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/SortTransformer" data-name="libgenerator::sorttransformer">
+      <a href="LibGenerator/SortTransformer.html">SortTransformer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1>Crystal lib generator <a href="https://travis-ci.org/olbat/libgen" target="_blank"><img src="https://secure.travis-ci.org/olbat/libgen.png?branch=master" alt="Build Status"/></a></h1>
+
+<p>Libgen is a small tool based on the <a href="https://github.com/crystal-lang/crystal_lib" target="_blank">crystal_lib</a> project that allows to generate <a href="https://crystal-lang.org/docs/syntax_and_semantics/c_bindings/lib.html" target="_blank">libs</a> following rules specified in config files.</p>
+
+<h2>Overview</h2>
+
+<p>This project aims to ease the port of big C libraries and to provide a convinient way to define re-generable bindings.</p>
+
+<p>Lib generation is parametrized using a YAML or JSON configuration file (_how to generate_).</p>
+
+<p>Bindings definitions are specified in YAML, JSON or Crystal files or in the generation config file directly (_what to generate_).</p>
+
+<p>It's possible to split lib's definitions in several files in order to make the binding more readable/easy to maintain.</p>
+
+<p>There is also an option to perform AST node renaming at generation time.</p>
+
+<h2>Installation</h2>
+
+<p><strong>Debian/Ubuntu</strong></p>
+
+<pre><code class='language-bash'># install build dependencies
+apt-get install -y build-essential llvm-3.9-dev libclang-3.9-dev
+# then, build and install
+make && make install</code></pre>
+
+<p><strong>macOS</strong></p>
+
+<pre><code class='language-bash'># if necessary, install build dependencies
+brew install llvm@3.9
+# then, build and install
+make && make install</code></pre>
+
+<h2>Usage</h2>
+
+<pre><code class='language-bash'>usage: libgen [&lt;lib_desc_file>]</code></pre>
+
+<h2>Example</h2>
+
+<p>A generation config file, <a href="https://github.com/olbat/libgen/blob/master/examples/icu/lib.yml" target="_blank">examples/icu/lib.yml</a>:</p>
+
+<pre><code class='language-yaml'>name: LibICU
+cflags: "-DU_COMMON_IMPLEMENTATION"
+ldflags: "-licuuc -licudata -licui18n -licuio"
+packages: "icu-uc icu-i18n icu-io"
+destdir: src/lib_icu/
+includes:
+- include/*.yml
+- include/*.json
+- include/*.cr
+definitions:
+  ubrk:
+    description: Text Boundary Analysis (Break Iteration)
+    includes: [ unicode/ubrk.h ]
+    prefixes: [ ubrk_ ]
+rename:
+  rules:
+    "*":
+    - pattern: _\d+$
+      replacement: ""</code></pre>
+
+<p>A definition file, <a href="https://github.com/olbat/libgen/blob/master/examples/icu/include/ucsdet.yml" target="_blank">examples/icu/include/ucsdet.yml</a>:</p>
+
+<pre><code class='language-yaml'>description: Charset detection
+includes:
+- unicode/ucsdet.h
+prefixes:
+- ucsdet_</code></pre>
+
+<p>Generation of the lib:</p>
+
+<pre><code class='language-bash'>$ libgen examples/icu/lib.yml
+loading library from examples/icu/lib.yml
+moving to examples/icu/
+loading ubrk definition from lib.yml
+loading lib_icu definition from include/lib_icu.yml
+loading ucsdet definition from include/ucsdet.yml
+loading ucurr definition from include/ucurr.json
+loading udat definition from include/udat.cr
+generate src/lib_icu/ubrk.cr
+generate src/lib_icu/lib_icu.cr
+generate src/lib_icu/ucsdet.cr
+generate src/lib_icu/ucurr.cr
+generate src/lib_icu/udat.cr
+
+# or, using docker-compose
+$ docker-compose run --rm -u $UID libgen examples/icu/lib.yml</code></pre>
+
+<p>The generated files: <a href="https://github.com/olbat/libgen/blob/master/examples/icu/src/lib_icu" target="_blank">examples/icu/src/lib_icu</a>.</p>
+
+<h2>Specifications</h2>
+
+<p>See <a href="https://github.com/olbat/libgen/blob/master/SPECS.md" target="_blank">SPECS.md</a></p>
+
+<h2>Development</h2>
+
+<p><strong>How does it work</strong></p>
+
+<p>To generate Crystal libs from C headers, the <code>libgen</code> tool:</p>
+
+<ol><li>loads <a href="https://github.com/olbat/libgen/blob/master/src/lib_generator/library.cr" target="_blank">Library</a> and <a href="https://github.com/olbat/libgen/blob/master/src/lib_generator/definition.cr" target="_blank">Definition</a> objects from configuration files</li><li>generates Crystal ASTs (one per Definition) from C headers using <a href="https://github.com/olbat/libgen/blob/master/https://github.com/crystal-lang/crystal_lib" target="_blank">crystal_lib</a>'s parser (see <a href="https://github.com/olbat/libgen/blob/master/src/lib_generator/definition.cr" target="_blank">Definition#parse_lib</a>)</li><li>transforms the Crystal ASTs:</li><li>applies transformers following the configuration (AST nodes renaming, sorting, ... see <a href="https://github.com/olbat/libgen/blob/master/src/lib_generator/transformers" target="_blank">transformers</a>)</li><li>groups AST nodes that are common to several libs into a common lib</li><li>adds requires to non-empty libs in the common lib's AST</li><li>generates and formats the libs from ASTs adding the <em>@Link/ldflags</em> attribute (see <a href="https://github.com/olbat/libgen/blob/master/src/lib_generator/generator/lib.cr" target="_blank">Generator::Lib#generate</a>)</li><li>saves the generated libs to their respective output files</li></ol>
+
+<p><strong>Known limitations</strong></p>
+
+<ul><li>it's only possible to filter functions to bind by prefix (and not by name, such as in <a href="https://github.com/crystal-lang/crystal_lib/blob/master/examples/lib_readline.cr" target="_blank">example</a>)</li><li>it's not possible to specify the <code>description</code> field in definitions written in Crystal</li><li>the <code>description</code> field specified in definitions is not used ATM (it should be added as a comment in the generated bindings)</li></ul>
+
+<p><strong>LLVM versions</strong></p>
+
+<p>Libgen is <a href=".travis.yml" target="_blank">tested</a> using the versions of LLVM that are <a href="https://crystal-lang.org/docs/installation/from_source_repository.html" target="_blank">currently supported</a> by Crystal: LLVM <code>3.8</code>, <code>3.9</code> and <code>4.0</code>.</p>
+
+<p>The tool is not dependent on this versions of LLVM, it may be working with other versions as well but it's not tested/guaranteed.</p>
+
+<p><strong>Launch the tests</strong></p>
+
+<pre><code>make test
+
+<span class="c"># or, using docker-compose</span>
+docker<span class="o">-</span>compose run </code></pre>
+
+<p><strong>Build the Docker image</strong></p>
+
+<pre><code class='language-bash'>make
+docker build .</code></pre>
+
+<h2>Projects using libgen</h2>
+
+<ul><li><a href="https://github.com/olbat/icu.cr" target="_blank">icu.cr</a></li></ul>
+
+<p><strong>Note</strong>: you are using <em>libgen</em> in your project and want to link it here, please <a href="contributing" target="_blank">submit a PR</a></p>
+
+<h2>Contributing</h2>
+
+<ol><li>Fork it ( https://github.com/olbat/libgen/fork )</li><li>Create your feature branch (git checkout -b my-new-feature)</li><li>Commit your changes (git commit -am 'Add some feature')</li><li>Push to the branch (git push origin my-new-feature)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/olbat" target="_blank">olbat</a> - creator, maintainer</li></ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta id="repository-name" content="github.com/olbat/libgen">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="../js/doc.js"></script>
+  <title>LibGenerator::CountVisitor - github.com/olbat/libgen</title>
+</head>
+<body>
+
+<div id="types-list">
+  <div id="search-box">
+    <input type="search" id="search-input" placeholder="Search...">
+  </div>
+
+  <ul>
+    <li><a href="../index.html">README</a></li>
+  </ul>
+
+  <ul>
+  
+  <li class="parent open current" data-id="github.com/olbat/libgen/LibGenerator" data-name="libgenerator">
+      <a href="../LibGenerator.html">LibGenerator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CosmeticTransformer" data-name="libgenerator::cosmetictransformer">
+      <a href="../LibGenerator/CosmeticTransformer.html">CosmeticTransformer</a>
+      
+    </li>
+  
+  <li class=" current" data-id="github.com/olbat/libgen/LibGenerator/CountVisitor" data-name="libgenerator::countvisitor">
+      <a href="../LibGenerator/CountVisitor.html">CountVisitor</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/CrystalLibTransformer" data-name="libgenerator::crystallibtransformer">
+      <a href="../LibGenerator/CrystalLibTransformer.html">CrystalLibTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Definition" data-name="libgenerator::definition">
+      <a href="../LibGenerator/Definition.html">Definition</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/DuplicatesVisitor" data-name="libgenerator::duplicatesvisitor">
+      <a href="../LibGenerator/DuplicatesVisitor.html">DuplicatesVisitor</a>
+      
+    </li>
+  
+  <li class="parent " data-id="github.com/olbat/libgen/LibGenerator/Generator" data-name="libgenerator::generator">
+      <a href="../LibGenerator/Generator.html">Generator</a>
+      
+        <ul>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Generator/Lib" data-name="libgenerator::generator::lib">
+      <a href="../LibGenerator/Generator/Lib.html">Lib</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/Library" data-name="libgenerator::library">
+      <a href="../LibGenerator/Library.html">Library</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/NodeCounter" data-name="libgenerator::nodecounter">
+      <a href="../LibGenerator/NodeCounter.html">NodeCounter</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/RemoveTransformer" data-name="libgenerator::removetransformer">
+      <a href="../LibGenerator/RemoveTransformer.html">RemoveTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/RenameTransformer" data-name="libgenerator::renametransformer">
+      <a href="../LibGenerator/RenameTransformer.html">RenameTransformer</a>
+      
+    </li>
+  
+  <li class=" " data-id="github.com/olbat/libgen/LibGenerator/SortTransformer" data-name="libgenerator::sorttransformer">
+      <a href="../LibGenerator/SortTransformer.html">SortTransformer</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+</div>
+
+<div id="main-content">
+<h1 class="type-name">
+
+  <span class="kind">class</span> LibGenerator::CountVisitor
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../LibGenerator/CountVisitor.html">LibGenerator::CountVisitor</a></li><li class="superclass">Crystal::Visitor</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>Defined in:</h2>
+  
+    
+      <a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/visitors/count.cr#L3" target="_blank">lib_generator/visitors/count.cr</a>
+    
+    <br/>
+  
+
+
+
+
+
+  <h2>Constructors</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28counter%3ANodeCounter%29-class-method" class="signature"><strong>.new</strong>(counter : NodeCounter)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+  <h2>Instance Method Summary</h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#visit%28node%3ACrystal%3A%3AFunDef%7CCrystal%3A%3ATypeDef%7CCrystal%3A%3ACStructOrUnionDef%7CCrystal%3A%3AEnumDef%7CCrystal%3A%3AAlias%7CCrystal%3A%3AExternalVar%7CCrystal%3A%3AAssign%29-instance-method" class="signature"><strong>#visit</strong>(node : Crystal::FunDef | Crystal::TypeDef | Crystal::CStructOrUnionDef | Crystal::EnumDef | Crystal::Alias | Crystal::ExternalVar | Crystal::Assign)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#visit%28node%29-instance-method" class="signature"><strong>#visit</strong>(node)</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+    
+
+
+    
+
+
+    
+
+
+  
+</div>
+
+
+  <h2>Constructor Detail</h2>
+  
+    <div class="entry-detail" id="new(counter:NodeCounter)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(counter : <a href="../LibGenerator/NodeCounter.html">NodeCounter</a>)
+
+        <a class="method-permalink" href="#new%28counter%3ANodeCounter%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/visitors/count.cr#L4" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+
+  <h2>Instance Method Detail</h2>
+  
+    <div class="entry-detail" id="visit(node:Crystal::FunDef|Crystal::TypeDef|Crystal::CStructOrUnionDef|Crystal::EnumDef|Crystal::Alias|Crystal::ExternalVar|Crystal::Assign)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit</strong>(node : Crystal::FunDef | Crystal::TypeDef | Crystal::CStructOrUnionDef | Crystal::EnumDef | Crystal::Alias | Crystal::ExternalVar | Crystal::Assign)
+
+        <a class="method-permalink" href="#visit%28node%3ACrystal%3A%3AFunDef%7CCrystal%3A%3ATypeDef%7CCrystal%3A%3ACStructOrUnionDef%7CCrystal%3A%3AEnumDef%7CCrystal%3A%3AAlias%7CCrystal%3A%3AExternalVar%7CCrystal%3A%3AAssign%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/visitors/count.cr#L7" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="visit(node)-instance-method">
+      <div class="signature">
+        
+        def <strong>visit</strong>(node)
+
+        <a class="method-permalink" href="#visit%28node%29-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/olbat/libgen/blob/23256a6b847dec91685120c4866ad8bfa8c65525/src/lib_generator/visitors/count.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
